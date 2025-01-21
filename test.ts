@@ -1,5 +1,11 @@
-let a:any;
-a=12; 
-a="hello"; 
+let a:unknown;
+a=12;
+a="alok";
 
-//typescript not checking any types
+if(typeof a === "string"){
+    a.toUpperCase(); //we get suggestion for string related
+}
+if(typeof a === "number"){
+    a.toFixed(); //we get suggestion for number related
+}
+
