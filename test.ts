@@ -1,1 +1,8 @@
-let arr : [string,number] = ["alok", 6];
+//enumerations
+
+ enum UserRoles{
+    ADMIN =  "admin",
+    USER = "user",
+    GUEST = "guest"
+ }
+ console.log(UserRoles.ADMIN);   
