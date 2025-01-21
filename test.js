@@ -1,10 +1,8 @@
 "use strict";
-let a;
-a = 12;
-a = "alok";
-if (typeof a === "string") {
-    a.toUpperCase(); //we get suggestion for string related
+// void
+function foo() {
+    return;
 }
-if (typeof a === "number") {
-    a.toFixed(); //we get suggestion for number related
+function bar() {
+    return;
 }
