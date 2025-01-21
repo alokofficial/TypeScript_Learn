@@ -1,9 +1,8 @@
-// void
+// null
 
-function foo(): void {
-    return;
-}
+let a:null
+// a=12 // Error: Type '12' is not assignable to type 'null'.
 
-function bar(): void {
-    return;
-}
+let b:null | number;
+
+b=12 // OK
