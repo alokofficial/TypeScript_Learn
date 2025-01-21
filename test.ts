@@ -1,8 +1,13 @@
-// null
+// never
 
-let a:null
-// a=12 // Error: Type '12' is not assignable to type 'null'.
+function a(){
+    while(true){}
+}
+a();
+console.log("case 1");
 
-let b:null | number;
-
-b=12 // OK
+function b():never{
+    while(true){}
+}
+b();
+console.log("case 2"); // unreachable
