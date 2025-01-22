@@ -1,9 +1,16 @@
 "use strict";
-// access modifiers ( public, private, protected )
+// protected example
 class BottleMaker {
     constructor(name) {
         this.name = name;
     }
 }
-let b1 = new BottleMaker("Pepsi");
-console.log(b1.name); //not able to access
+class MetalBottleMaker extends BottleMaker {
+    constructor(name) {
+        super(name);
+    }
+    getValue() {
+        console.log(this.name);
+    }
+}
+let b1 = new MetalBottleMaker('cello');

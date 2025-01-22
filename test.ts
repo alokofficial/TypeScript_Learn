@@ -1,9 +1,14 @@
-// access modifiers ( public, private, protected )
+// protected example
 class BottleMaker {
-    constructor( protected name:string){ //not able to access from outside
-
-    }
+    constructor (protected name:string){}
 }
 
-let b1 = new BottleMaker("Pepsi");
-console.log(b1.name); //not able to access
+class MetalBottleMaker extends BottleMaker {
+    constructor(name:string){
+        super(name)
+    }
+    getValue(){
+        console.log(this.name)
+    }
+}
+let b1= new MetalBottleMaker('cello')
