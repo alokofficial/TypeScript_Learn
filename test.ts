@@ -1,13 +1,47 @@
-// never
+// Defining interfaces
 
-function a(){
-    while(true){}
+interface User {
+    name:string;
+    email:string;
+    age?:number;
 }
-a();
-console.log("case 1");
+function printUser(user:User){
+    console.log(user.name);
+    console.log(user.email);
+    console.log(user.age);
+}
+printUser({
+    name:"John",
+    email:"4p9bM@example.com",
+})
+// extending interfaces
+interface Admin extends User{
+    role:string;
+}
 
-function b():never{
-    while(true){}
+function printAdmin(admin:Admin){
+    admin.role
 }
-b();
-console.log("case 2"); // unreachable
+printAdmin({
+    name:"John",
+    email:"4p9bM@example.com",
+    role:"admin"
+})
+
+// same name interfaces
+interface User1{
+    name:string;
+    email:string;
+    age?:number;
+}
+
+interface User1{
+    role:string;
+}  
+
+function a(user:User1){
+    user.role,
+    user.email,
+    user.age,
+    user.name
+}
