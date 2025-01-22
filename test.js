@@ -1,11 +1,14 @@
 "use strict";
-// classes
-class Device {
-    constructor() {
-        this.name = "Mi";
-        this.price = 1000;
-        this.category = "Mobile";
+// constructor
+class HumanMaker {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.name = name;
+        this.age = age;
     }
 }
-let d1 = new Device();
-console.log(d1);
+let h1 = new HumanMaker("Alok", 23);
+let h2 = new HumanMaker("Sneha", 26);
+console.log(h1);
+console.log(h2);
