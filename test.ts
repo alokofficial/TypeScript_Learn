@@ -1,7 +1,9 @@
 // constructor
 
 class HumanMaker{
-    constructor(public name: string, public age: number){
+    public name;
+    public age;
+    constructor(name: string,age: number){
         this.name = name;
         this.age=age;
     }

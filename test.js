@@ -4,8 +4,6 @@ class HumanMaker {
     constructor(name, age) {
         this.name = name;
         this.age = age;
-        this.name = name;
-        this.age = age;
     }
 }
 let h1 = new HumanMaker("Alok", 23);
