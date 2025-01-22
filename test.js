@@ -6,4 +6,4 @@ class BottleMaker {
     }
 }
 let b1 = new BottleMaker("Pepsi");
-// console.log(b1.name); // not able to access
+console.log(b1.name); //not able to access
