@@ -1,3 +1,11 @@
 "use strict";
-//interfaces can be extended but type is not
-//Type aliases are more flexible and versatile for defining various types, while interfaces are specifically designed for defining object-oriented contracts and structures. The choice between them depends on the specific use case and the desired level of flexibility and structure.
+// classes
+class Device {
+    constructor() {
+        this.name = "Mi";
+        this.price = 1000;
+        this.category = "Mobile";
+    }
+}
+let d1 = new Device();
+console.log(d1);
