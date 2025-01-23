@@ -1,6 +1,10 @@
 // protected example
 class BottleMaker {
     constructor (protected name:string){}
+
+    getDetails(){
+        console.log(this.name)
+    }
 }
 
 class MetalBottleMaker extends BottleMaker {
@@ -12,3 +16,5 @@ class MetalBottleMaker extends BottleMaker {
     }
 }
 let b1= new MetalBottleMaker('cello')
+b1.getDetails()
+b1.getValue()
