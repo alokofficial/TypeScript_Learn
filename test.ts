@@ -1,9 +1,19 @@
 // Abstract Classes
-class epoxy{
-   static version =1.0;
-    static printVersion():void{
-        console.log(`Version ${this.version}`);
-        return 
+class Payment {
+    constructor(protected amount: number, protected account: number) {}
+        isPaymentValid(amount:number){
+            return this.amount>0
+        }
+}
+
+class PaymentWithInterest extends Payment {
+    constructor(amount: number, account: number) {
+        super(amount, account);
+    }
+    getInterest() {
+        return this.amount * 0.1;
     }
 }
-console.log(epoxy.printVersion());
+
+const payment = new PaymentWithInterest(100, 1);
+console.log(payment.getInterest());
