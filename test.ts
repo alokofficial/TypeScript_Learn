@@ -1,8 +1,23 @@
+// getter and setter
+
 class User{
-    constructor ( public name:string, public age:number, public gender?:string) {
+    constructor(public name: string, public age: number){
+        this.name = name;
+        this.age = age;
     }
 
+    // getter
+    get fullName(): string{
+        return `Hello ${this.name}`
+    }
+
+    // setter
+    set fullName(value: string){
+        this.name = value;
+    }
 }
 
-let u1=new User("zhangsan",20);
-let u2=new User("lisi",20,"female");
+const user = new User('John', 30);
+console.log(user.fullName);
+user.fullName = 'Jane';
+console.log(user.fullName);
