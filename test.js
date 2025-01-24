@@ -1,10 +1,10 @@
 "use strict";
 class User {
-    constructor(name) {
+    constructor(name, age, gender) {
         this.name = name;
-    }
-    changeName() {
-        this.name = "alok"; // error: cannot assign to 'name' because it is a read-only property
+        this.age = age;
+        this.gender = gender;
     }
 }
-let u1 = new User("sachin");
+let u1 = new User("zhangsan", 20);
+let u2 = new User("lisi", 20, "female");
