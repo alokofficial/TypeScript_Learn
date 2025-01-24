@@ -1,21 +1,10 @@
 "use strict";
-// protected example
-class BottleMaker {
+class User {
     constructor(name) {
         this.name = name;
     }
-    getDetails() {
-        console.log(this.name);
+    changeName() {
+        this.name = "alok"; // error: cannot assign to 'name' because it is a read-only property
     }
 }
-class MetalBottleMaker extends BottleMaker {
-    constructor(name) {
-        super(name);
-    }
-    getValue() {
-        console.log(this.name);
-    }
-}
-let b1 = new MetalBottleMaker('cello');
-b1.getDetails();
-b1.getValue();
+let u1 = new User("sachin");
