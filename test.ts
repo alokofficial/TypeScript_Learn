@@ -1,18 +1,19 @@
-// function overloading 
+// Generics 
 
-function abcd(a:string):void;
-function abcd(a:string,b:number):number;
+// which accept any values
 
-function abcd(a:any,b?:any){
-    if(typeof b === "undefined" && typeof a === "string"){
-        console.log(a);
-    }
-    else if(typeof b === "number" && typeof a === "string"){
-        console.log(b);
-        return b;
-    }
-    else throw new Error("error");
+function identity<T>(arg: T): T {
+    return arg;
 }
 
-abcd("hi");
-abcd("hi",10);
+let output = identity<string>("myString");
+
+console.log(output);
+
+let output2 = identity<number>(100);
+
+console.log(output2);
+
+let output3 = identity<boolean>(true);
+
+console.log(output3);
