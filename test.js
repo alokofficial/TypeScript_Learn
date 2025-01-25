@@ -1,8 +1,15 @@
 "use strict";
 // function overloading 
-function add(a, b) {
-    return a + b;
+function abcd(a, b) {
+    if (typeof b === "undefined" && typeof a === "string") {
+        console.log(a);
+    }
+    else if (typeof b === "number" && typeof a === "string") {
+        console.log(b);
+        return b;
+    }
+    else
+        throw new Error("error");
 }
-console.log(add(1, 2));
-console.log(add("a", "b"));
-console.log(add(1, "2"));
+abcd("hi");
+abcd("hi", 10);

@@ -1,11 +1,18 @@
 // function overloading 
 
-function add(a: number, b: number): number;
-function add(a: string, b: string): string;
-function add(a: any, b: any): any {
-    return a + b;
+function abcd(a:string):void;
+function abcd(a:string,b:number):number;
+
+function abcd(a:any,b?:any){
+    if(typeof b === "undefined" && typeof a === "string"){
+        console.log(a);
+    }
+    else if(typeof b === "number" && typeof a === "string"){
+        console.log(b);
+        return b;
+    }
+    else throw new Error("error");
 }
 
-console.log(add(1, 2));
-console.log(add("a", "b"));
-console.log(add(1, "2"));
+abcd("hi");
+abcd("hi",10);
