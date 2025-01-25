@@ -1,15 +1,12 @@
-// Generics
+// Type Assertions
 
-// which accept any values
+let a: any = 30;
 
-function abcd<T> (a:T, b:T):T {
-    // return "alok"   // this is string literal but require here T type
+let b = a as number;
+console.log(b.toFixed(2));
 
-    // return "alok" as T
+let c = a as string;
+console.log(c);
 
-    return <T> "alok"
-
-
-}
-
-console.log(abcd <string>("a", "b"));
+let d = <number>a;
+console.log(d.toFixed(7));
