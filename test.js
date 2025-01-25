@@ -1,5 +1,8 @@
 "use strict";
-let arr = [1, 2, 3, 4, 5];
-let arr2 = [...arr, 6];
-console.log(arr);
-console.log(arr2);
+// function overloading 
+function add(a, b) {
+    return a + b;
+}
+console.log(add(1, 2));
+console.log(add("a", "b"));
+console.log(add(1, "2"));
