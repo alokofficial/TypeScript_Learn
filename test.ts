@@ -1,9 +1,19 @@
-// Type Casting
+// non-null assertion operator
 
-let str = '123';
-console.log(typeof str)
-
-let num = Number(str);
-
-console.log(num)
-console.log(typeof num)
+function greet(user: { name?: string }) {
+    console.log(`Hello, ${user.name}`); // Error: Object is possibly 'undefined'.
+  }
+  
+  // Using the non-null assertion operator
+  function greetWithAssertion(user: { name?: string }) {
+    console.log(`Hello, ${user.name!}`); 
+  }
+  
+  const user1 = { name: "John" };
+  const user2 = {}; 
+  
+  greet(user1); // Works fine
+  greet(user2); // Error: Object is possibly 'undefined'.
+  
+  greetWithAssertion(user1); // Works fine
+  greetWithAssertion(user2); // Works, but might cause runtime errors if name is actually undefined
