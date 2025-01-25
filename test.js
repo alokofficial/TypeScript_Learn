@@ -1,9 +1,7 @@
 "use strict";
-// Type Assertions
-let a = 30;
-let b = a;
-console.log(b.toFixed(2));
-let c = a;
-console.log(c);
-let d = a;
-console.log(d.toFixed(7));
+// Type Casting
+let str = '123';
+console.log(typeof str);
+let num = Number(str);
+console.log(num);
+console.log(typeof num);

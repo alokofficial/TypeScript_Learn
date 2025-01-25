@@ -1,12 +1,9 @@
-// Type Assertions
+// Type Casting
 
-let a: any = 30;
+let str = '123';
+console.log(typeof str)
 
-let b = a as number;
-console.log(b.toFixed(2));
+let num = Number(str);
 
-let c = a as string;
-console.log(c);
-
-let d = <number>a;
-console.log(d.toFixed(7));
+console.log(num)
+console.log(typeof num)
