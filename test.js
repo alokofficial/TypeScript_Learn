@@ -1,12 +1,9 @@
 "use strict";
-// Generics 
+// Generics
 // which accept any values
-function identity(arg) {
-    return arg;
+function log(arg) {
+    console.log(arg);
 }
-let output = identity("myString");
-console.log(output);
-let output2 = identity(100);
-console.log(output2);
-let output3 = identity(true);
-console.log(output3);
+log(1);
+log("hello");
+log({ a: 1, b: "hello" });
