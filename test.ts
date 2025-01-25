@@ -1,19 +1,27 @@
-// non-null assertion operator
+// Type Guards
 
-function greet(user: { name?: string }) {
-    console.log(`Hello, ${user.name}`); // Error: Object is possibly 'undefined'.
-  }
-  
-  // Using the non-null assertion operator
-  function greetWithAssertion(user: { name?: string }) {
-    console.log(`Hello, ${user.name!}`); 
-  }
-  
-  const user1 = { name: "John" };
-  const user2 = {}; 
-  
-  greet(user1); // Works fine
-  greet(user2); // Error: Object is possibly 'undefined'.
-  
-  greetWithAssertion(user1); // Works fine
-  greetWithAssertion(user2); // Works, but might cause runtime errors if name is actually undefined
+class TvKaRemote {
+    switchTvOff(){
+        console.log("Switching TV off");
+    }
+}
+
+class CarKaRemote{
+    switchCarOff(){
+        console.log("Switching Car off");
+    }
+}
+
+const tv = new TvKaRemote();
+const car = new CarKaRemote();
+
+function switchOffKaro(device : TvKaRemote | CarKaRemote){
+    if(device instanceof TvKaRemote){
+        device.switchTvOff();
+    }else if(device instanceof CarKaRemote){
+        device.switchCarOff();
+    }
+}
+
+switchOffKaro(tv);
+switchOffKaro(car);
