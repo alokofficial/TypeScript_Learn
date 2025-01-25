@@ -1,11 +1,8 @@
-function login(): Promise<string> {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('login success');
-        }, 3000);
-    });
+// rest
+
+function abcd(...args:number[]){
+ return args.reduce((acc,curr) => acc + curr,0);
 }
 
-login().then((res: string) => {
-    console.log(res);
-});
+console.log(abcd(1,2,3,4,5));
+console.log(abcd(1,2,3,4,5,6));
