@@ -1,9 +1,9 @@
 "use strict";
 // Generics
 // which accept any values
-function log(arg) {
-    console.log(arg);
+function abcd(a, b) {
+    // return "alok"   // this is string literal but require here T type
+    // return "alok" as T
+    return "alok";
 }
-log(1);
-log("hello");
-log({ a: 1, b: "hello" });
+console.log(abcd("a", "b"));

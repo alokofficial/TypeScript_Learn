@@ -1,10 +1,15 @@
 // Generics
 
 // which accept any values
-function log<T>(arg: T) {
-  console.log(arg);
+
+function abcd<T> (a:T, b:T):T {
+    // return "alok"   // this is string literal but require here T type
+
+    // return "alok" as T
+
+    return <T> "alok"
+
+
 }
 
-log(1);
-log("hello");
-log({ a: 1, b: "hello" });
+console.log(abcd <string>("a", "b"));
