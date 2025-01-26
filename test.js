@@ -1,24 +1,18 @@
 "use strict";
-// Type Guards
-class TvKaRemote {
-    switchTvOff() {
-        console.log("Switching TV off");
-    }
-}
-class CarKaRemote {
-    switchCarOff() {
-        console.log("Switching Car off");
-    }
-}
-const tv = new TvKaRemote();
-const car = new CarKaRemote();
-function switchOffKaro(device) {
-    if (device instanceof TvKaRemote) {
-        device.switchTvOff();
-    }
-    else if (device instanceof CarKaRemote) {
-        device.switchCarOff();
-    }
-}
-switchOffKaro(tv);
-switchOffKaro(car);
+const gigi = {
+    height: 3434,
+    weight: 3434,
+    scolar: true,
+    func: (n, m) => {
+        console.log(n * m);
+    },
+};
+const kendal = {
+    height: 43434,
+    scolar: true,
+    weight: 545,
+    func: (n, m) => {
+        console.log(n * m);
+    },
+};
+kendal.func(20, 10);
