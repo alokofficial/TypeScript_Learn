@@ -1,8 +1,6 @@
 "use strict";
-const func = (n, m, l = 20) => {
-    return n * m * l;
+const func = (...m) => {
+    return m;
 };
-const ans = func(20, 10);
-console.log(ans);
-const ans2 = func(20, 10, 10);
-console.log(ans2);
+let f1 = func(25, 23, 34, 6, 67, 8, 9);
+console.log(f1);

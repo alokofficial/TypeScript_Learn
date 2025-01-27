@@ -1,10 +1,9 @@
-type FuncType = (n: number, m: number, l?: number) => number;
-const func: FuncType = (n, m, l = 20) => {
-  return n * m * l;
+// Rest Operator
+type FuncType = (...m: number[]) => number[];
+const func: FuncType = (...m) => {
+  return m;
 };
+let f1= func(25, 23, 34, 6, 67, 8, 9);
 
-const ans = func(20, 10);
-console.log(ans);
+console.log(f1);
 
-const ans2 = func(20, 10, 10);
-console.log(ans2);
