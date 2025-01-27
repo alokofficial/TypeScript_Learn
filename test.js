@@ -1,18 +1,8 @@
 "use strict";
-const gigi = {
-    height: 3434,
-    weight: 3434,
-    scolar: true,
-    func: (n, m) => {
-        console.log(n * m);
-    },
+const func = (n, m, l = 20) => {
+    return n * m * l;
 };
-const kendal = {
-    height: 43434,
-    scolar: true,
-    weight: 545,
-    func: (n, m) => {
-        console.log(n * m);
-    },
-};
-kendal.func(20, 10);
+const ans = func(20, 10);
+console.log(ans);
+const ans2 = func(20, 10, 10);
+console.log(ans2);

@@ -1,32 +1,10 @@
-interface Obj {
-  height: number;
-  weight: number;
-  gender?: boolean;
-}
-
-type FuncType = (n: number, m: number) => void;
-
-interface NewObj extends Obj {
-  scolar: boolean;
-  func: FuncType;
-}
-
-const gigi: NewObj = {
-  height: 3434,
-  weight: 3434,
-  scolar: true,
-  func: (n, m) => {
-    console.log(n * m);
-  },
+type FuncType = (n: number, m: number, l?: number) => number;
+const func: FuncType = (n, m, l = 20) => {
+  return n * m * l;
 };
 
-const kendal: NewObj = {
-  height: 43434,
-  scolar: true,
-  weight: 545,
-  func: (n, m) => {
-    console.log(n * m);
-  },
-};
+const ans = func(20, 10);
+console.log(ans);
 
-kendal.func(20, 10);
+const ans2 = func(20, 10, 10);
+console.log(ans2);
