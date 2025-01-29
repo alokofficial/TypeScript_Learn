@@ -61,3 +61,5 @@ class Product implements ProductType, GiveId {
 }
 
 const product1 = new Product("Macbook", 2000, 20);
+
+// need to check
